@@ -5,9 +5,11 @@ this page assumes:
 - you have a DinD container running on the host
     - if you don't have a DinD container running, follow the steps in '[How to run Docker in Docker (DinD)](How-to-run-Docker-in-Docker-DinD.md)'
 
+**Run on the DinD container:**
 follow `Step 1` from '[How to transfer a docker image to another host](How-to-transfer-a-docker-image-to-another-host.md)' to save the image to a tar file and return here just before `Step 2`.
 
 ## Copy the tar file
+**Run on the host:**
 ```bash
 docker cp <container name>:<file name>.tar <destination path>
 ```
@@ -22,6 +24,7 @@ return to `Step 2` from '[How to transfer a docker image to another host](How-to
 **This way does NOT natively support SECURE transfer, use it at your own risk**
 <br>
 first, you need to install `netcat` on the DinD container.
+**Run on the DinD container:**
 ```bash
 apk add --no-cache netcat-openbsd
 ```
