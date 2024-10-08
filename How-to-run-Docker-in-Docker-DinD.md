@@ -34,5 +34,4 @@ let's run a ubuntu container inside the DinD container.
 ```sh
 docker run -it ubuntu
 ```
-you should now be inside the ubuntu container.
-
+you should now be inside the ubuntu container running inside the DinD container.

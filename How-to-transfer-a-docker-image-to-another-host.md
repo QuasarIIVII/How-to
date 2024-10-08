@@ -17,7 +17,7 @@ You can check the saved image by running `docker images` and see if the image is
 ## Step 2: copy the tar file to another host
 ### Default: rsync
 ```bash
-rsync -avz [--port=PORT] <file name>.tar <user>@<receiver ip>:<destination path>
+rsync -avz [-e "ssh -p <port>"] <file name>.tar <user>@<receiver ip>:<destination path>
 ```
 ### Alternative 1: scp
 ```bash
