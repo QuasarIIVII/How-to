@@ -9,7 +9,8 @@ this page assumes:
 follow `Step 1` from '[How to transfer a docker image to another host](How-to-transfer-a-docker-image-to-another-host.md)' to save the image to a tar file and return here just before `Step 2`.
 
 ## Copy the tar file
-**Run on the host:**
+**Run on the host of the DinD container:**
+<br>
 ```bash
 docker cp <container name>:<file name>.tar <destination path>
 ```
@@ -22,9 +23,11 @@ return to `Step 2` from '[How to transfer a docker image to another host](How-to
 
 ## Alternative: Transfer the tar file using `nc` (netcat)
 **This way does NOT natively support SECURE transfer, use it at your own risk**
-<br>
+<br><br>
 first, you need to install `netcat` on the DinD container.
+<br>
 **Run on the DinD container:**
+<br>
 ```bash
 apk add --no-cache netcat-openbsd
 ```
